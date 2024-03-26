@@ -4,7 +4,6 @@ const { BadRequest, Unauthenticated } = require("../errors")
 
 
 const register = async(req, res) => {
-
     const user = await User.create(req.body)
     const token = user.createJWT()  // here we are using instence(for creating token) method of user model
 
